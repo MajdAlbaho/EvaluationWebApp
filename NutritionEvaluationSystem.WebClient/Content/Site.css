@@ -1,0 +1,105 @@
+﻿@font-face {
+    src: url(../fonts/ShamKufi-Bold.woff);
+    font-family: "ShamKufi";
+}
+
+body {
+    background: url(../Images/bground.png)
+}
+
+
+.header_Image {
+    display: block;
+    width: 100%;
+    margin: 15px 0px;
+    border: 1px solid #DDD;
+    background-color: #FFF;
+    box-shadow: 1px 1px 6px 1px #E4E4E4;
+}
+
+.header_Text {
+    font-family: ShamKufi;
+}
+
+.header_Div {
+    border-bottom: 1px solid #DDD;
+    background-color: #F8F8F8;
+    padding: 5px;
+}
+
+.question {
+    font-size: 14px;
+    font-family: ShamKufi;
+    padding: 10px 25px;
+}
+
+.question_DropDown {
+    font-size: 12px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    text-align-last: center;
+    margin-right: 50px;
+    font-family: ShamKufi;
+}
+
+.textArea {
+    font-size: 12px;
+    margin: 5px 75px;
+    width: 300px;
+    height: 100px;
+    text-align: right;
+    font-family: ShamKufi;
+}
+
+.submitBtn {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    padding: 14px 40px;
+    border-radius: 4px;
+    width: 250px;
+    margin-right: 75px;
+}
+
+.questions_Div {
+    padding: 10px;
+    background-color: #FFF;
+    border-left: 1px solid #DDD;
+    box-shadow: 1px 1px 6px 1px #E4E4E4;
+}
+
+.subTitle {
+    font-family: ShamKufi;
+    font-size: 14px;
+    color: #3B5998
+}
+
+.sideText {
+    margin-right: 50px;
+}
+
+.side {
+    font-size: 12px;
+    width: 250px;
+    text-align: center;
+    text-align-last: center;
+    margin-right: 50px;
+    font-family: ShamKufi;
+    border: none;
+}
+
+.col-container {
+    display: table;
+    width: 100%;
+}
+
+.col {
+    display: table-cell;
+    padding: 16px;
+}

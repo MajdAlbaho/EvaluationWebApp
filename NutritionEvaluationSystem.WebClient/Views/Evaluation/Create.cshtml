@@ -1,0 +1,62 @@
+﻿@model NutritionEvaluationSystem.WebClient.ViewModels.CreateEvaluationViewModel
+<div dir="rtl">
+
+    <div class="header_Div">
+        <h6 class="header_Text">نظام إدخال بيانات تقييم عيادات التغذية</h6>
+    </div>
+
+    @using (Html.BeginForm("Create", "Evaluation", FormMethod.Post)) {
+        @Html.AntiForgeryToken()
+
+        <table>
+            <tr>
+                <td width="75%">
+                    <div class="questions_Div">
+                        @foreach (var question in Model.Questions) {
+                            <div class="question">
+                                <div><b>@question.ArQuestion</b></div>
+                                @if (question.Answers.Count() > 0) {
+                                    @Html.DropDownListFor(x => x.AnswersIds, new SelectList(question.Answers, "Id", "ArAnswer"),
+                                        new { @class = "question_DropDown" })
+                                }
+                            </div>
+                        }
+                        @Html.TextAreaFor(x => x.Suggestions, new { @class = "textArea" })
+                        <div>
+                            <input type="submit" class="submitBtn" value="إدخال البيانات" />
+                        </div>
+                    </div>
+                </td>
+                <td width="25%" valign="top" class="questions_Div">
+                    <div>
+                        <div>
+                            <label class="subTitle">اسم المستوصف</label>
+                        </div>
+                        <div>
+                            <label class="sideText">@Model.FacilityName</label>
+                        </div>
+                        <div>
+                            <label class="subTitle">اسم مدخل البيانات</label>
+                        </div>
+                        <div>
+                            <label class="sideText">@Model.LoggedUserName</label>
+                        </div>
+                        <div>
+                            <label class="subTitle">السنة</label>
+                        </div>
+                        <div>
+                            @Html.DropDownListFor(x => x.Year, new SelectList(Model.Years), new { @class = "side" })
+                        </div>
+                        <div>
+                            <label class="subTitle">الشهر</label>
+                        </div>
+                        <div>
+                            @Html.DropDownListFor(x => x.Month, new SelectList(Model.Months, "Id", "ArName", 5),
+                                new { @class = "side" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    }
+</div>

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
-using NutritionEvaluationSystem.WebClient.Models.Common;
 using NutritionEvaluationSystem.WebClient.Models.Form;
 using System.Configuration;
 using System.Data.Entity;
@@ -17,8 +16,7 @@ namespace NutritionEvaluationSystem.WebClient.Models
         {
             return new ApplicationDbContext();
         }
-
-        public virtual DbSet<Months> Months { get; set; }
+        
         public virtual DbSet<Facilities> Facilities { get; set; }
         public virtual DbSet<Answers> Answers { get; set; }
         public virtual DbSet<Evaluation> Evaluation { get; set; }

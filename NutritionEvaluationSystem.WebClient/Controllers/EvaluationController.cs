@@ -27,9 +27,7 @@ namespace NutritionEvaluationSystem.WebClient.Controllers
                 Questions = applicationDbContext.Questions.
                         OrderBy(question => question.Index).ToList(),
                 FacilityName = facilityArName,
-                LoggedUserName = loggedUser.UserName,
-                Months = applicationDbContext.Months.ToList(),
-                Years = new[] { DateTime.Now.Year, DateTime.Now.AddYears(-1).Year }
+                LoggedUserName = loggedUser.UserName
             };
 
             return View(createEvaluationViewModel);
@@ -46,8 +44,7 @@ namespace NutritionEvaluationSystem.WebClient.Controllers
 
             var item = applicationDbContext.Evaluation.Add(new Models.Form.Evaluation() {
                 Suggestions = string.IsNullOrEmpty(createEvaluationViewModel.Suggestions) ? null : createEvaluationViewModel.Suggestions,
-                MonthId = createEvaluationViewModel.Month,
-                EvaluateYear = createEvaluationViewModel.Year.ToString(),
+                EvaluateYear = createEvaluationViewModel.Year,
                 UserId = userId
             });
             applicationDbContext.SaveChanges();

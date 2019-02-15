@@ -1,5 +1,4 @@
-﻿using NutritionEvaluationSystem.WebClient.Models.Common;
-using NutritionEvaluationSystem.WebClient.Models.Form;
+﻿using NutritionEvaluationSystem.WebClient.Models.Form;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -23,11 +22,6 @@ namespace NutritionEvaluationSystem.WebClient.ViewModels
         public string Suggestions { get; set; }
 
         [Required]
-        public int Month { get; set; }
-        public IEnumerable<Months> Months { get; set; }
-
-        [Required]
-        public int Year { get; set; }
-        public IEnumerable<int> Years { get; set; }
+        public string Year { get; set; }
     }
 }

@@ -42,17 +42,10 @@
                             <label class="sideText">@Model.LoggedUserName</label>
                         </div>
                         <div>
-                            <label class="subTitle">السنة</label>
-                        </div>
-                        <div>
-                            @Html.DropDownListFor(x => x.Year, new SelectList(Model.Years), new { @class = "side" })
-                        </div>
-                        <div>
                             <label class="subTitle">الشهر</label>
                         </div>
                         <div>
-                            @Html.DropDownListFor(x => x.Month, new SelectList(Model.Months, "Id", "ArName", 5),
-                                new { @class = "side" })
+                            <input type="month" name="Year" />
                         </div>
                     </div>
                 </td>
@@ -60,3 +53,5 @@
         </table>
     }
 </div>
+
+
